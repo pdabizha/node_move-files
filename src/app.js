@@ -39,9 +39,7 @@ function main() {
     targetPath = path.join(dest, fileName);
   }
 
-  const targetDir = path.dirname(targetPath);
-
-  if (!fs.existsSync(targetDir)) {
+  if (!fs.existsSync(path.dirname(targetPath))) {
     console.error('Destination directory does not exist');
 
     return;
